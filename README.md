@@ -30,7 +30,19 @@ You can iterate through arrays and use a custom template for each item. The synt
 
 ```js
 var string = "Items: $[items]{<div>@.name - @.price</div>}";
-var object = { items: [ { name: "Item 1", price: "$10" }, { name: "Item 2", price: "$20" } ] };
+var object = {
+	items: [
+		{
+			name: "Item 1",
+			price: "$10"
+		},
+		{
+			name: "Item 2",
+			price: "$20"
+		}
+	]
+};
+
 INTERPOLATE_VARIABLES_TO_STRING(string, object);
 // Output: "Items: <div>Item 1 - $10</div><div>Item 2 - $20</div>"
 ```
